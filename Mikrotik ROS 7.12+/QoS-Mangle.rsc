@@ -58,7 +58,7 @@ rough=no
 Router-conn passthrough=no
 /ip firewall mangle add action=change-dscp chain=input connection-mark=Router-conn new-dscp=48
 /ip firewall mangle add action=mark-packet chain=input connection-mark=Router-conn new-packet-mark=Router-pkt-in passthrough=no
-/ip firewall mangle add action=mark-connection chain=output connection-mark=no-mark connection-state="" new-connection-mark=Router-conn passthrou
+/ip firewall mangle add action=mark-connection chain=output connection-mark=no-mark new-connection-mark=Router-conn passthrou
 gh=no
 /ip firewall mangle add action=change-dscp chain=output connection-mark=Router-conn new-dscp=48
 /ip firewall mangle add action=mark-packet chain=output connection-mark=Router-conn new-packet-mark=Router-pkt-out passthrough=no
